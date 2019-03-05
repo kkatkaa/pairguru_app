@@ -41,10 +41,10 @@ class CommentsController < ApplicationController
   private
 
   def find_movie
-    @movie = movie.find(params[:movie_id])
+    @movie = Movie.find(params[:movie_id])
   end
-
+ 
   def comment_params
-     params.require(:comment).permit(:user, :body)
+    params.require(:comment).permit(:user, :body)
   end
 end
