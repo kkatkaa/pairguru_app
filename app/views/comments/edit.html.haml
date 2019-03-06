@@ -1,0 +1,9 @@
+= form_for [@movie, @comment] do |f|
+  .form-group
+    = f.label :body
+    = f.text_area :body, class: 'form-control'
+  .form-group
+    = f.label :rating
+    %br/
+    %div
+    = f.submit 
