@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
-    @movie = Movie.all
+    @movies = Movie.all
   end
     
   def edit
