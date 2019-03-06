@@ -1,3 +1,5 @@
+= render 'common/errors', model: @comment
+
 = form_for [@movie, @comment] do |f|
   .form-group
     = f.label :body
