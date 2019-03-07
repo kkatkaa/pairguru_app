@@ -3,3 +3,9 @@
   = @movie.description
 - if user_signed_in?
   %p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'
+
+%h2.display-4
+  Comments: #{@movie.comments.count}
+= render @movie.comments
+- if current_user
+  = render 'comments/form' 
