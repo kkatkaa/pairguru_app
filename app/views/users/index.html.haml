@@ -1,0 +1,15 @@
+.row
+  .col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+    %h1.text-center Top commenters this week
+    %table.table.table-striped
+      %thead
+        %tr
+          %th #
+          %th Name
+          %th Count of comments
+      %tbody
+        - @top_commenters.each_with_index do |top_commenter, i|
+          %tr
+            %td= i + 1
+            %td= top_commenter.name
+            %td= top_commenter.comments.count
