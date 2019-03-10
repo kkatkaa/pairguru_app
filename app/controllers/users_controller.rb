@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  before_action :top_commenters
-
   def index
     @users = User.all
     @movies = Movie.all

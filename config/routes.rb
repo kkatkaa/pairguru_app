@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users
+  resources :users do
+    get 'top_commenters', on: :collection
+  end
 
   root "home#welcome"
   resources :genres, only: :index do
